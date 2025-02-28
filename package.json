@@ -1,0 +1,21 @@
+{
+  "name": "url-shorterner",
+  "version": "1.0.0",
+  "description": "url shotener",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "url",
+    "shotner"
+  ],
+  "author": "sandhya sawalkar",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nanoid": "^5.1.2"
+  }
+}
