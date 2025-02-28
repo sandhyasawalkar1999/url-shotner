@@ -13,9 +13,15 @@ const app = express();
 
 // Middlewares
 app.use(express.json());
+app.use(express.urlencoded());
+
+app.get("/", (req, res) => {
+  console.log(import.meta.dirname); // __dirname in ESM
+  res.sendFile(import.meta.dirname + "\\form.html");
+});
 
 app.post("/long-to-short", (req, res) => {
-  // console.log(req.body.longUrl);
+  console.log(req.body);
   const uniqueId = nanoid(8)
   const shortUrl = "http://localhost:5000/" + uniqueId;
   const fileData = fs.readFileSync("url-data.json");
